@@ -5,12 +5,13 @@ package cse360assign3;
  * calculations done.
  * 
  * @author Caleb D
- * @version 1.1 Feb 20, 2016
+ * @version 1.2 Feb 20, 2016
  */
 
 public class Calculator {
 
 	private int total;
+	private String history;
 	
 	/**
 	 * constructor that makes a new calculator object and initializes 
@@ -19,6 +20,7 @@ public class Calculator {
 	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		history = "0";
 	}
 	
 	/**
@@ -40,6 +42,7 @@ public class Calculator {
 	
 	public void add (int value) {
 		total += value;
+		history += " + " + value;
 	}
 	
 	/**
@@ -52,6 +55,7 @@ public class Calculator {
 	
 	public void subtract (int value) {
 		total -= value;
+		history += " - " + value;
 	}
 	
 	/**
@@ -64,6 +68,7 @@ public class Calculator {
 	
 	public void multiply (int value) {
 		total *= value;
+		history += " * " + value;
 	}
 	
 	/**
@@ -81,6 +86,7 @@ public class Calculator {
 		else{
 			total = 0;
 		}
+		history += " / " + value;
 	}
 	
 	/**
@@ -92,6 +98,6 @@ public class Calculator {
 	 */
 	
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }

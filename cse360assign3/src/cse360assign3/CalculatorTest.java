@@ -178,7 +178,12 @@ public class CalculatorTest {
 	@Test
 	public void testGetHistory() {
 		Calculator testCalc = new Calculator();
-		assertEquals(testCalc.getHistory(), "");
+		testCalc.add(4);
+		testCalc.subtract(2);
+		testCalc.multiply(2);
+		testCalc.add(5);
+		testCalc.divide(3);
+		assertEquals(testCalc.getHistory(), "0 + 4 - 2 * 2 + 5 / 3");
 	}
 
 }

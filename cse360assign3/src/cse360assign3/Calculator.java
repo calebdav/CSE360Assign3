@@ -5,7 +5,7 @@ package cse360assign3;
  * calculations done.
  * 
  * @author Caleb D
- * @version 1 Feb 20, 2016
+ * @version 1.1 Feb 20, 2016
  */
 
 public class Calculator {
@@ -22,14 +22,14 @@ public class Calculator {
 	}
 	
 	/**
-	 * getTotal - accesser method to get the total for the calculator
+	 * getTotal - accessor method to get the total for the calculator
 	 * object
 	 * 
 	 * @return int that is the running total for the calculator
 	 */
 	
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -39,7 +39,7 @@ public class Calculator {
 	 */
 	
 	public void add (int value) {
-		
+		total += value;
 	}
 	
 	/**
@@ -51,7 +51,7 @@ public class Calculator {
 	 */
 	
 	public void subtract (int value) {
-		
+		total -= value;
 	}
 	
 	/**
@@ -63,7 +63,7 @@ public class Calculator {
 	 */
 	
 	public void multiply (int value) {
-		
+		total *= value;
 	}
 	
 	/**
@@ -75,7 +75,12 @@ public class Calculator {
 	 */
 	
 	public void divide (int value) {
-		
+		if (value != 0){
+			total /= value;
+		}
+		else{
+			total = 0;
+		}
 	}
 	
 	/**
